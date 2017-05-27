@@ -28,7 +28,7 @@ export default {
                 this.$router.push({
                     name: 'ListInfo',
                     params: {
-                        repoName: 1
+                        repoName: 'tab2'
                     }
                 });
             } else if (index == 2) {

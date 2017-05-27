@@ -8,8 +8,7 @@
             <button @click="incrementIfOdd">Increment if odd</button>
             <button @click="incrementAsync">Increment async</button>
         </div>
-        <Info :startCountsub="123"></Info>
-        <Info msg2="w"></Info>
+        <Child :propsNumber="123" :propsString="'hello你好'"></Child>
     </div>
 </template>
 <script>
@@ -20,7 +19,7 @@ import {
     mapGetters,
     mapActions
 } from 'vuex'
-import Info from './test.vue'
+import Info from './ListInfoChild.vue'
 
 export default {
     data() {
@@ -36,7 +35,7 @@ export default {
         },
         components: {
             XHeader,
-            Info
+            Child
         },
         computed: mapGetters([
             'evenOrOdd'
