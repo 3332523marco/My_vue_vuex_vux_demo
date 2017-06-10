@@ -9,10 +9,11 @@
             <button @click="incrementAsync">Increment async</button>
         </div>
         <Child :propsNumber="123" :propsString="'hello你好'"></Child>
+        <h2>子组件传来值：{{childMsg}}</h2>
     </div>
 </template>
 <script>
-import {
+import { 
     XHeader
 } from 'vux'
 import {
@@ -20,6 +21,7 @@ import {
     mapActions
 } from 'vuex'
 import Child from './ListInfoChild.vue'
+import bus from './bus.js'
 
 export default {
     data() {
@@ -27,7 +29,8 @@ export default {
                 repoName: null,
                 loading: true,
                 readMe: null,
-                description: null
+                description: null,
+                childMsg: ''
             }
         },
         created: function() {
@@ -45,7 +48,14 @@ export default {
             'decrement',
             'incrementIfOdd',
             'incrementAsync'
-        ])
+        ]),
+        mounted() {
+            console.log('on item click:', 'mounted')
+            bus.$on('child_msg', (text) => {
+                   this.childMsg = text;
+                })
+                //接收子组件的数据
+        }
 }
 </script>
 <style>

@@ -21,7 +21,6 @@ export default {
     },
     data() {
         return {
-            showList1: true,
             scrollTop: 0,
             onFetching: false,
             bottomCount: 20
