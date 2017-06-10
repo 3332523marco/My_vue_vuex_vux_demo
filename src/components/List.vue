@@ -4,7 +4,7 @@
             <img class="logo" src="../assets/vux_logo.png">
             <h1> </h1>{{ $store.state.count }}
         </div>
-        <scroller lock-x height="800px" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="200">
+        <scroller lock-x height="800px" ref="scrollerBottom" :scroll-bottom-offst="200">
             <group title="cell demo">
                 <div class="box2">
                     <li v-for="repo in repos">
@@ -70,8 +70,9 @@ export default {
     width: 100px;
     height: 100px
 }
+
 .box2-wrap {
-  height: 800px;
-  overflow: hidden;
+    height: 800px;
+    overflow: hidden;
 }
 </style>

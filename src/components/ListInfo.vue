@@ -19,7 +19,7 @@ import {
     mapGetters,
     mapActions
 } from 'vuex'
-import Info from './ListInfoChild.vue'
+import Child from './ListInfoChild.vue'
 
 export default {
     data() {
