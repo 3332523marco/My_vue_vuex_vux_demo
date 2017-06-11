@@ -4,9 +4,14 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
-import List from './components/List'
-import ListInfo from './components/ListInfo'
-import ListLoadMore from './components/ListLoadMore'
+import HomeInfo from './components/HomeInfo'
+import About from './components/About'
+import Other from './components/Other'
+import Home from './components/Home'
+import Demo1 from './components/demo/Demo1'
+import Demo2 from './components/demo/Demo2'
+import Demo3 from './components/demo/Demo3'
+
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import store from './store/store'
@@ -16,16 +21,32 @@ Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    name: 'List',
-    component: List
+    name: 'Home',
+    component: Home
 }, {
-    path: '/ListInfo/:repoName',
-    name: 'ListInfo',
-    component: ListInfo
+    path: '/HomeInfo/:repo',
+    name: 'HomeInfo',
+    component: HomeInfo
+},{
+    path: '/Other',
+    name: 'Other',
+    component: Other
 }, {
-    path: '/ListLoadMore',
-    name: 'ListLoadMore',
-    component: ListLoadMore
+    path: '/About',
+    name: 'About',
+    component: About
+}, {
+    path: '/Demo1',
+    name: 'Demo1',
+    component: Demo1
+}, {
+    path: '/Demo2',
+    name: 'Demo2',
+    component: Demo2
+}, {
+    path: '/Demo3',
+    name: 'Demo3',
+    component: Demo3
 }]
 
 const router = new VueRouter({

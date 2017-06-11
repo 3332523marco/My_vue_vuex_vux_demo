@@ -1,15 +1,11 @@
 <template>
     <div>
-        <div class="vux-demo">
-            <img class="logo" src="../assets/vux_logo.png">
-            <h1> </h1>{{ $store.state.count }}
-        </div>
         <scroller lock-x height="800px" ref="scrollerBottom" :scroll-bottom-offst="200">
             <group title="cell demo">
                 <div class="box2">
                     <li v-for="repo in repos">
-                        <router-link :to="{name:'ListInfo',params:{repoName:repo.name}}">
-                            <cell title="test" :value="repo.name" is-link></cell>
+                        <router-link :to="{name:'HomeInfo',params:{repo:repo}}">
+                            <cell :title="repo.name" :value="repo.description"></cell>
                         </router-link>
                     </li>
                 </div>
