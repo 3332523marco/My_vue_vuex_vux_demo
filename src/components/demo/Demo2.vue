@@ -18,7 +18,6 @@ import {
     mapGetters,
     mapActions
 } from 'vuex'
-import bus from '../bus.js'
 
 export default {
     data() {
