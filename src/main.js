@@ -11,6 +11,7 @@ import Home from './components/Home'
 import Demo1 from './components/demo/Demo1'
 import Demo2 from './components/demo/Demo2'
 import Demo3 from './components/demo/Demo3'
+import Demo4 from './components/demo/Demo4'
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -46,6 +47,10 @@ const routes = [{
 }, {
     path: '/Demo3',
     name: 'Demo3',
+    component: Demo3
+}, {
+    path: '/Demo4',
+    name: 'Demo4',
     component: Demo3
 }]
 
