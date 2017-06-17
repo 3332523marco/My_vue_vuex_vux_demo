@@ -73,8 +73,10 @@ npm run dev
 * actions，响应在view上的用户输入导致的状态变化。
 
 以下是一个表示“单向数据流”理念的极简示意：
+
  
 ![QR Code](https://vuex.vuejs.org/zh-cn/images/flow.png =780x500)
+
 
 ### 实例讲解
 在本demo中首先创建store.js，在入口文件main.js中引入store.js，实例vue的时候加入store进行注册，这样即可全局使用。在Demo2.vue中 通过一个小小的计算实例为大家演示了从view->action->state－>view的过程演变，如果其他组件或页面需要调用到store中的count属性 `$store.state.count`即可，这样能实时捕捉到其状态变化，当你在Demo2.vue中对count属性进行计算时，比如`increment` （注意需在Demo2.vue中通过mapAction将辅助函数映射进来，在store.js中添加action对应的方法），触发`increment` 后会执行`commit('increment')` 从而发送type给到`mutation`进而改变`属性count`的状态，从实现view中的展示数据变化。
