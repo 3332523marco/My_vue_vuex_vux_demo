@@ -75,7 +75,7 @@ npm run dev
 以下是一个表示“单向数据流”理念的极简示意：
 
 
-![image](pic.png=780x500)
+![image](pic.png)
 
 
 ### 实例讲解
