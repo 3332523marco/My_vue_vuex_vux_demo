@@ -75,7 +75,7 @@ npm run dev
 以下是一个表示“单向数据流”理念的极简示意：
 
  
-![QR Code](https://vuex.vuejs.org/zh-cn/images/flow.png =780x500)
+![QR Code](pic.png =780x500)
 
 
 ### 实例讲解
